@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<style>
+  .marquee-container {
+    overflow: hidden;
+  }
+
+  .marquee-container marquee {
+    white-space: nowrap;
+    font-size: 18px; 
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .marquee-container marquee {
+      scrollamount: 15; 
+      font-size: 14px; 
+    }
+  }
+</style>
+
+<body >
+  <nav class="p-5 bg-[#29103A] shadow md:flex md:items-center md:justify-between">
+    <div class="flex justify-between items-center space-x-4">
+      <span class="text-2xl font-[Poppins] cursor-pointer ">
+        <svg width="45" height="30" viewBox="0 0 49 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32.3616 39.7749H42.3192L34.5191 23.3227H24.5615L32.3616 39.7749Z" fill="#492189"/>
+            <path d="M34.5194 23.3228L40.6594 0.000385284H30.7019L24.5619 23.3228H34.5194Z" fill="#6437A0"/>
+            <path d="M40.6598 0H30.7023L38.5024 16.4522H48.4599L40.6598 0Z" fill="#C765F4"/>
+            <path d="M38.5018 16.4526L32.3618 39.775H42.3194L48.4593 16.4526H38.5018Z" fill="#6C1DA8"/>
+            <path d="M20.0805 39.7749H30.0381L22.238 23.3227H12.2805L20.0805 39.7749Z" fill="#492189"/>
+            <path d="M22.2389 23.3228L28.3789 0.000385284H18.4213L12.2814 23.3228H22.2389Z" fill="#6437A0"/>
+            <path d="M28.3788 0H18.4212L26.2213 16.4522H36.1789L28.3788 0Z" fill="#C983EA"/>
+            <path d="M26.2204 16.4526L20.0804 39.775H30.038L36.1779 16.4526H26.2204Z" fill="#8121C9"/>
+            <path d="M7.79991 39.7749H17.7575L9.95738 23.3227H-0.000177383L7.79991 39.7749Z" fill="#492189"/>
+            <path d="M9.95831 23.3228L16.0983 0.000385284H6.14074L0.000761032 23.3228H9.95831Z" fill="#6437A0"/>
+            <path d="M16.0981 0H6.14058L13.9407 16.4522H23.8982L16.0981 0Z" fill="#DEACF5"/>
+            <path d="M13.9398 16.4526L7.79984 39.775H17.7574L23.8974 16.4526H13.9398Z" fill="#9854CB"/>
+            </svg>
+      </span>
+      <span class="text-white hidden md:inline">OpenStackhub</span>
+      <span class="text-3xl cursor-pointer mx-2 md:hidden block bg-white rounded-md">
+        <ion-icon name="menu" onclick="Menu(this)" ></ion-icon>
+      </span>
+      
+    </div>
+
+    <ul class="md:flex md:items-center z-[-1] md:z-auto md:static   absolute bg-[#29103A] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl  text-white hover:text-cyan-500 ">Home</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl  text-white hover:text-cyan-500 ">About</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl  text-white hover:text-cyan-500 ">Service</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl  text-white hover:text-cyan-500 ">Career</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl  text-white hover:text-cyan-500 ">Ourworks</a>
+      </li>
+      <li class="mx-4 my-6 md:my-0">
+        <a href="#" class="text-xl  text-white hover:text-cyan-500 ">Blog</a>
+      </li>
+
+      <button class="bg-purple-500 text-white font-[Poppins]  px-8 py-2 mx-4 hover:bg-cyan-500 rounded-lg ">
+        Contact
+      </button>
+    </ul>
+  </nav>
+
+
+  <script>
+    function Menu(h) {
+      const list = document.querySelector('ul');
+  
+      if (h.name === 'menu') {
+        h.name = 'close';
+        list.classList.add('top-[80px]');
+        list.classList.add('opacity-100');
+      } else {
+        h.name = 'menu';
+        list.classList.remove('top-[80px]');
+        list.classList.remove('opacity-100');
+      }
+    }
+  </script>
+<div class="marquee-container">
+  <marquee behavior="scrolling" direction="left" scrollamount="30" class="bg-[#702DDe] text-white py-2">
+    Experience Next-Level Innovation For Your Business!
+  </marquee>
+</div>
+ 
+</body>
+
+</html>
